@@ -1,7 +1,7 @@
 #!/bin/bash
  
 DOMAINS=("tr069.glodensheep.top")
-INTERFACE='eth2'
+INTERFACE='lo0'
 
 if ! ip link show $INTERFACE > /dev/null 2>&1; then
     echo "Interface $INTERFACE does not exist."
