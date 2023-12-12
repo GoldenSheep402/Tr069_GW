@@ -42,5 +42,5 @@ for domain in "${DOMAINS[@]}"; do
     fi
     REMOTE_ADDRS+=("$ip")
     echo "Domain: $domain, IP: $ip/32"
-    route add $ip/32 gw $GATEWAY_IP
+    route add -net $ip netmask 255.255.255.255 gw $GATEWAY_IP dev $INTERFACE 
 done
